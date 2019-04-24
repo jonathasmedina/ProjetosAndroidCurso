@@ -30,6 +30,12 @@ public class Main4Activity extends AppCompatActivity {
         tv1 = findViewById(R.id.textViewRg);
 
         rg1.setOnCheckedChangeListener(meuOuvinte);
+
+        Intent intent2 = getIntent();
+        String textoTela1 = String.valueOf(intent2.getSerializableExtra("string1"));
+
+        tv1.setText(textoTela1);
+
     }
 
     RadioGroup.OnCheckedChangeListener meuOuvinte = new RadioGroup.OnCheckedChangeListener() {
